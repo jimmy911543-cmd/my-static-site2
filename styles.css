@@ -379,6 +379,7 @@ a { color: inherit; }
   line-height: 2.2;
   letter-spacing: 0.08em;
   font-weight: 400;
+  white-space: pre-wrap;
 }
 
 .prose p {
@@ -399,7 +400,7 @@ a { color: inherit; }
 }
 
 .note {
-  margin-top: 2rem !important;
+  margin-top: calc(1.05rem * 2.2) !important;
   max-width: 36em;
   color: var(--muted);
   font-size: 0.82rem;
