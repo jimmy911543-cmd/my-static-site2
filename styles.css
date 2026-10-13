@@ -305,6 +305,37 @@ a { color: inherit; }
   letter-spacing: 0.06em;
 }
 
+.catalog li {
+  display: flex;
+  align-items: center;
+  gap: 0.7rem;
+}
+
+.catalog li:hover,
+.catalog li:focus-within {
+  position: relative;
+  z-index: 4;
+}
+
+.book-thumb {
+  height: 2.05em;
+  width: auto;
+  max-width: none;
+  flex: 0 0 auto;
+  object-fit: contain;
+  cursor: zoom-in;
+  transform-origin: right center;
+  transition: transform 0.28s ease, filter 0.28s ease;
+}
+
+.book-thumb:hover,
+.book-thumb:focus-visible {
+  position: relative;
+  z-index: 5;
+  transform: scale(5);
+  filter: drop-shadow(0 12px 18px var(--shadow));
+}
+
 .catalog {
   max-width: 28em;
 }
@@ -593,4 +624,5 @@ a { color: inherit; }
   html { scroll-behavior: auto; }
   .site-nav a::after { transition: none; }
   .album-viewport { scroll-behavior: auto; }
+  .book-thumb { transition: none; }
 }
